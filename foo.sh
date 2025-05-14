@@ -2,7 +2,7 @@
 
 cd ~/foosh-dash
 
-mv -f .,/* ~
+mv -f ./* ~
 
 cd
 
@@ -48,11 +48,9 @@ gsettings set org.gnome.desktop.interface icon-theme 'gruvbox-dark-icons-gtk'
 
 sudo systemctl enable ly
 
-rm -r .git
+rm -rf foosh-dash
 
 rm -r graphite-gtk-theme
-
-rm -r foosh-dash
 
 rm LICENSE
 
