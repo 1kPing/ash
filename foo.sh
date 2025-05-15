@@ -14,7 +14,7 @@ git clone https://aur.archlinux.org/paru.git
 
 cd paru
 
-makepkg -si
+makepkg -si --noconfirm
 
 cd
 
