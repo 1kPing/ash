@@ -8,7 +8,7 @@ cd
 
 sudo mv pacman.conf /etc
 
-sudo pacman -Syu
+sudo pacman -Syu git
 
 git clone https://aur.archlinux.org/paru.git
 
@@ -18,7 +18,7 @@ makepkg -si --noconfirm
 
 cd
 
-packages="discord blender btop eog fastfetch foot galculator gimp gnome-keyring gnome-themes-extra gtk-engine-murrine hyprland hyprlock hyprpaper hyprsunset libreoffice-fresh ly mako mpv nwg-look obs-studio pavucontrol pcmanfm-gtk3 pipewire-pulse prismlauncher qbittorrent rnote signal-desktop starship ttf-cascadia-code-nerd ttf-font-awesome ufw waybar wev wine-gecko wine-mono wofi xdg-desktop-portal-hyprland yazi alarm-clock-applet bibata-cursor-theme-bin chromium-snapshot-bin github-desktop-bin gruvbox-dark-icons-gtk hyprshot librewolf-bin theclicker"
+packages="discord blender btop eog fastfetch foot galculator gimp gnome-keyring gnome-themes-extra gtk-engine-murrine hyprland hyprlock hyprpaper hyprsunset libreoffice-fresh ly mako mpv nvim nwg-look obs-studio pavucontrol pcmanfm-gtk3 pipewire-pulse prismlauncher qbittorrent rnote signal-desktop starship ttf-cascadia-code-nerd ttf-font-awesome ufw waybar wev wine-gecko wine-mono wofi xdg-desktop-portal-hyprland yazi alarm-clock-applet bibata-cursor-theme-bin chromium-snapshot-bin github-desktop-bin gruvbox-dark-icons-gtk hyprshot librewolf-bin theclicker"
 
 for package in $packages; do
   paru -S --noconfirm "$package"
