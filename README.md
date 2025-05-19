@@ -11,7 +11,7 @@ sudo pacman -S dash
 ## installation
 To download:
 ```sh
-git clone https://github.com/1kping/foosh-dash ~/
+git clone https://github.com/1kping/foosh-dash ~/foosh-dash
 ```
 To run the script:
 ```sh
