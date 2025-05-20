@@ -1,6 +1,6 @@
 #!/bin/dash
 
-cd ~/foosh-dash
+cd ~/foosh
 
 find . -maxdepth 1 -mindepth 1 -exec mv -f {} ~ \;
 
@@ -48,7 +48,7 @@ sudo systemctl enable ly
 
 rm -rf .git
 
-rm -r foosh-dash
+rm -r foosh
 
 rm -r graphite-gtk-theme
 
