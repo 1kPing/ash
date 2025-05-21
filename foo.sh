@@ -26,11 +26,11 @@ done
 
 paru -S steam
 
+paru -S blender
+
 paru -S amd-ucode
 
-paru -S nvidia
-
-paru -S nvidia-settings
+paru -S nvidia nvidia-settings
 
 xdg-settings set default-web-browser librewolf.desktop
 
