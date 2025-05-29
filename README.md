@@ -1,4 +1,4 @@
-# foosh
+# ash
 ## pre-installation
 Do not run the script as root/sudo! Only use sudo when the script itself prompts you to.
 
@@ -11,9 +11,9 @@ sudo pacman -S dash
 ## installation
 To download:
 ```sh
-git clone https://github.com/1kping/foosh ~/foosh
+git clone https://github.com/1kping/ash ~/ash
 ```
 To run the script:
 ```sh
-~/foosh/foo.sh
+~/ash/a.sh
 ```
