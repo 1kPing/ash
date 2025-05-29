@@ -1,6 +1,6 @@
 #!/bin/dash
 
-cd ~/foosh
+cd ~/ash
 
 find . -maxdepth 1 -mindepth 1 -exec mv -f {} ~ \;
 
@@ -60,7 +60,7 @@ sudo systemctl enable ly
 
 rm -rf .git
 
-rm -r foosh
+rm -r ash
 
 rm -r graphite-gtk-theme
 
@@ -68,6 +68,6 @@ rm LICENSE
 
 rm README.md
 
-rm foo.sh
+rm a.sh
 
 echo finished, reboot your computer
