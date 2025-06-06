@@ -52,7 +52,6 @@ done
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/kontr0x/github-desktop-install/main/installGitHubDesktop.sh)"
 sudo mv ~/binaries/* /usr/local/bin
 rmdir ~/binaries
-sudo mv ~/GitHubDesktop* /usr/local/bin/github
 
 echo "Do you want to install flatpak? (y/n)"
 read answer
