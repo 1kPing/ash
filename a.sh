@@ -23,10 +23,10 @@ else
     sudo mkdir "$target_dir"
     cd
     sudo find . -maxdepth 1 -mindepth 1 -exec mv -f {} "$target_dir" \;
-    cd "$target_dir"/vsh
+    cd "$target_dir"/ash
     sudo find . -maxdepth 1 -mindepth 1 -exec mv -f {} ~ \;
     cd
-    sudo rmdir "$target_dir"/vsh
+    sudo rmdir "$target_dir"/ash
     sudo mkdir -p /usr/share/fonts/TTF
     sudo mv -f ~/TTF/* /usr/share/fonts/TTF
     rm -rf ~/.git
