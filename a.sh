@@ -2,6 +2,8 @@
 
 trap 'exit 1' INT
 
+echo "!! This script is meant for a fresh install of Arch Linux !!"
+sleep 1
 echo "!! Everything currently in ~ will be moved to /home/old~N !!"
 sleep 1
 echo "Hit enter to proceed..."
@@ -82,11 +84,6 @@ sudo ~/graphite-gtk-theme/other/grub2/install.sh -b
 gsettings set org.gnome.desktop.interface gtk-theme 'Graphite-Dark'
 gsettings set org.gnome.desktop.interface icon-theme 'gruvbox-dark-icons-gtk'
 sudo echo "QT_QPA_PLATFORMTHEME=gtk3" | sudo tee -a /etc/environment
-
-sudo mkdir -p /etc/alsa/conf.d
-sudo ln -s /usr/share/alsa/alsa.conf.d/50-pipewire.conf /etc/alsa/conf.d
-sudo ln -s /usr/share/alsa/alsa.conf.d/99-pipewire-default.conf /etc/alsa/conf.d
-echo "autospawn = no" | sudo tee /etc/pulse/client.conf
 
 rm -r ~/graphite-gtk-theme
 
