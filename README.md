@@ -8,10 +8,6 @@ sudo pacman -S dash
 ```
 Make sure that the ```ash``` directory is cloned under the ```~``` directory, or bad stuff might happen.
 ## installation
-To download:
-```sh
-git clone https://github.com/1kping/ash ~/ash
-```
 To run the script:
 ```sh
 ~/ash/a.sh
