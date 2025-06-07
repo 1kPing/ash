@@ -1,13 +1,12 @@
-# ash [WIP]
+# ash
 ## pre-installation
 Do not run the script as root/sudo! Only use sudo when the script itself prompts you to.
-
-This script is intended for use on a fresh and minimal installation of Arch Linux, before the ```~/.config``` and ```~/Pictures``` directories are created.
 
 Make sure you have dash installed to be able to run this.
 ```sh
 sudo pacman -S dash
 ```
+Make sure that the ```ash``` directory is cloned under the ```~``` directory, or bad stuff might happen.
 ## installation
 To download:
 ```sh
