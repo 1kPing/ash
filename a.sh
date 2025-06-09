@@ -45,7 +45,7 @@ cd paru
 makepkg -si --noconfirm
 cd
 
-packages="hyprshot librewolf-bin neofetch pipewire-alsa blender btop fastfetch foot galculator gimp gnome-keyring gnome-themes-extra gtk-engine-murrine hyprland hyprlock hyprpaper hyprsunset imv libreoffice-fresh ly mako mpv neovim nwg-look pavucontrol pipewire-pulse prismlauncher qbittorrent sassc signal-desktop starship ttf-font-awesome ufw waybar wev wine-gecko wine-mono wofi xdg-desktop-portal-hyprland yazi zsh"
+packages="hyprshot librewolf-bin neofetch gtk-layer-shell libdbusmenu pipewire-alsa blender btop fastfetch foot galculator gimp gnome-keyring gnome-themes-extra gtk-engine-murrine hyprland hyprlock hyprpaper hyprsunset imv libreoffice-fresh ly mako mpv neovim nwg-look pavucontrol pipewire-pulse prismlauncher qbittorrent sassc signal-desktop starship ttf-font-awesome ufw waybar wev wine-gecko wine-mono wofi xdg-desktop-portal-hyprland yazi zsh"
 
 for package in $packages; do
     paru -S --noconfirm "$package"
@@ -62,7 +62,7 @@ if [ "$answer" = "y" ]; then
     echo "Do you want to install discord through flatpak? (y/n)"
         read answer
 	if [ "$answer" = "y" ]; then
-            sudo flatpak install com.discordapp.Discord -y
+            flatpak install com.discordapp.Discord -y
         fi
     echo "Do you want to install ungoogled chromium through flatpak? (y/n)"
         read answer
@@ -104,9 +104,11 @@ sudo ~/graphite-gtk-theme/other/grub2/install.sh -b
 ~/graphite-gtk-theme/install.sh --tweaks rimless black
 gsettings set org.gnome.desktop.interface gtk-theme 'Graphite-Dark'
 gsettings set org.gnome.desktop.interface icon-theme 'gruvbox-dark-icons-gtk'
-sudo echo "QT_QPA_PLATFORMTHEME=gtk3" | sudo tee -a /etc/environment
-
 rm -r ~/graphite-gtk-theme
+sudo echo "QT_QPA_PLATFORMTHEME=gtk3" | sudo tee -a /etc/environment
+swww img ~/Pictures/wallpapers/black.png
+
+sudo pacman -Syu
 
 echo "arch linux + ly + hyprland: setup successful"
 
