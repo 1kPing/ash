@@ -45,7 +45,7 @@ cd paru
 makepkg -si --noconfirm
 cd
 
-packages="hyprshot librewolf-bin neofetch gtk-layer-shell libdbusmenu pipewire-alsa socat blender btop fastfetch foot galculator gimp gnome-keyring gnome-themes-extra gtk-engine-murrine hyprland hyprlock hyprpaper hyprsunset imv libreoffice-fresh ly mako mpv neovim nwg-look pavucontrol pipewire-pulse prismlauncher qbittorrent sassc signal-desktop starship ttf-font-awesome ufw waybar wev wine-gecko wine-mono wofi xdg-desktop-portal-hyprland yazi zsh"
+packages="hyprshot librewolf-bin neofetch discord gtk-layer-shell libdbusmenu pipewire-alsa socat blender btop fastfetch foot galculator gimp gnome-keyring gnome-themes-extra gtk-engine-murrine hyprland hyprlock hyprpaper hyprsunset imv libreoffice-fresh ly mako mpv neovim nwg-look pavucontrol pcmanfm-gtk3 pipewire-pulse prismlauncher qbittorrent sassc signal-desktop starship ttf-font-awesome ufw waybar wev wine-gecko wine-mono wofi xdg-desktop-portal-hyprland yazi zsh"
 
 for package in $packages; do
     paru -S --noconfirm "$package"
@@ -103,10 +103,12 @@ xdg-mime default mpv.desktop video/webm
 sudo ~/graphite-gtk-theme/other/grub2/install.sh -b
 ~/graphite-gtk-theme/install.sh --tweaks rimless black
 gsettings set org.gnome.desktop.interface gtk-theme 'Graphite-Dark'
-gsettings set org.gnome.desktop.interface icon-theme 'gruvbox-dark-icons-gtk'
+gsettings set org.gnome.desktop.interface icon-theme 'Gruvbox-Plus-Dark'
 rm -r ~/graphite-gtk-theme
 sudo echo "QT_QPA_PLATFORMTHEME=gtk3" | sudo tee -a /etc/environment
 swww img ~/Pictures/wallpapers/black.png
+
+~/Tela-circle-icon-theme/install.sh -d ~/.icons
 
 sudo pacman -Syu
 

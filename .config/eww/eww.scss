@@ -1,4 +1,4 @@
-@import "../colors.scss";
+@import "colors.scss";
 
 * {
    all: unset;
@@ -6,6 +6,6 @@
   }
 
 @import "bar/bar.scss";
-@import "workspaces/workspaces.scss";
 @import "apps/apps.scss";
+@import "workspaces/workspaces.scss";
 @import "time/time.scss";
