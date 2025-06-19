@@ -1,54 +1,19 @@
 (defwidget apps []
+;    (box :class "revealer"
+;         :orientation "h"
+;         :space-evenly "false"
+;         (label :class "greater"
+;                :text ">")
     (box :class "apps"
-         :orientation "h"
-         :space-evenly "true"
-         :halign "start"
-         :valign "center"
-         :spacing "11"
-        (eventbox :cursor "pointer"
-                  :halign "start"
-                  (button :class "start"
-                          :onclick "hyprctl dispatch exec 'wofi --show drun -I'"
-                          :onmiddleclick "killall wofi"
-                          (image :path "icons/lindow.svg" :image-width image_size :image-height image_size)))
-        (eventbox :cursor "pointer"
-                  (button :class "app"
-                          :onclick "hyprctl dispatch exec librewolf"
-                          :onmiddleclick "killall librewolf"
-                          (image :path "../../.icons/Gruvbox-Plus-Dark/apps/scalable/librewolf.svg" :image-width image_size :image-height image_size)))
-        (eventbox :cursor "pointer"
-                  (button :class "app"
-                          :onclick "hyprctl dispatch exec steam"
-                          :onmiddleclick "killall steam"
-                          (image :path "../../.icons/Gruvbox-Plus-Dark/apps/scalable/steam.svg" :image-width image_size :image-height image_size)))
-        (eventbox :cursor "pointer"
-                  (button :class "app"
-                          :onclick "hyprctl dispatch exec discord"
-                          :onmiddleclick "killall Discord"
-                          (image :path "../../.icons/Gruvbox-Plus-Dark/apps/scalable/discord.svg" :image-width image_size :image-height image_size)))
-        (eventbox :cursor "pointer"
-                  (button :class "app"
-                          :onclick "hyprctl dispatch exec signal-desktop"
-                          :onmiddleclick "killall signal-desktop"
-                          (image :path "../../.icons/Gruvbox-Plus-Dark/apps/scalable/signal-desktop.svg" :image-width image_size :image-height image_size)))
-        (eventbox :cursor "pointer"
-                  (button :class "app"
-                          :onclick "hyprctl dispatch exec 'foot btop'"
-                          :onmiddleclick "killall btop"
-                          (image :path "../../.icons/Gruvbox-Plus-Dark/apps/scalable/btop.svg" :image-width image_size :image-height image_size)))
-        (eventbox :cursor "pointer"
-                  (button :class "app"
-                          :onclick "hyprctl dispatch exec 'foot nvim'"
-                          :onmiddleclick "killall nvim"
-                          (image :path "../../.icons/Gruvbox-Plus-Dark/apps/scalable/nvim.svg" :image-width image_size :image-height image_size)))
-        (eventbox :cursor "pointer"
-                  (button :class "app"
-                          :onclick "hyprctl dispatch exec 'foot yazi'"
-                          :onmiddleclick "killall nvim"
-                          (image :path "../../.icons/Gruvbox-Plus-Dark/apps/scalable/yazi.svg" :image-width image_size :image-height image_size)))
-        (eventbox :cursor "pointer"
-                  (button :class "app"
-                          :onclick "hyprctl dispatch exec pcmanfm"
-                          :onmiddleclick "killall nvim"
-                          (image :path "../../.icons/Gruvbox-Plus-Dark/apps/scalable/pcmanfm.svg" :image-width image_size :image-height image_size)))
-))
+             :orientation "h"
+             :spacing "11"
+             (librewolf)
+             (steam)
+             (discord)
+             (signal-desktop)
+             (foot-btop)
+             (foot-nvim)
+             (pcmanfm)
+             (ungoogled-chromium)
+             (prismlauncher)))
+

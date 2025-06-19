@@ -77,7 +77,7 @@ window {
 }
 
 #input * {
-  outline: 4px solid #ff0000!important;
+  outline: 4px solid #ff0000;
 }
 
 /* Text */
@@ -106,5 +106,5 @@ window {
 }
 
 #entry:drop(active) {
-  background-color: #ff2222!important;
+  background-color: #ff2222;
 }
