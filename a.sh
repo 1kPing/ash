@@ -45,7 +45,7 @@ cd paru
 makepkg -si --noconfirm
 cd
 
-packages="hyprshot librewolf-bin neofetch discord gtk-layer-shell libdbusmenu pipewire-alsa socat blender btop fastfetch foot galculator gimp gnome-keyring gnome-themes-extra gtk-engine-murrine hyprland hyprlock hyprpaper hyprsunset imv libreoffice-fresh ly mako mpv neovim nwg-look pavucontrol pcmanfm-gtk3 pipewire-pulse prismlauncher qbittorrent sassc signal-desktop starship ttf-font-awesome ufw waybar wev wine-gecko wine-mono wofi xdg-desktop-portal-hyprland yazi zsh"
+packages="hyprshot librewolf-bin neofetch discord gtk-layer-shell libdbusmenu pipewire-alsa sof-firmware socat blender btop fastfetch foot galculator gimp gnome-keyring gnome-themes-extra gtk-engine-murrine hyprland hyprlock hyprpaper hyprsunset imv libreoffice-fresh ly mako mpv neovim nwg-look pavucontrol pcmanfm-gtk3 pipewire-pulse prismlauncher qbittorrent sassc signal-desktop starship ttf-font-awesome ufw waybar wev wine-gecko wine-mono wofi xdg-desktop-portal-hyprland yazi zsh"
 
 for package in $packages; do
     paru -S --noconfirm "$package"
@@ -110,7 +110,8 @@ swww img ~/Pictures/wallpapers/black.png
 
 ~/Tela-circle-icon-theme/install.sh -d ~/.icons
 
-sudo pacman -Syu
+echo "vm.swappiness = 1" | sudo tee /etc/sysctl.conf
+sudo sysctl -p
 
 echo "arch linux + ly + hyprland: setup successful"
 
