@@ -1,0 +1,4 @@
+(defpoll hour :interval "1s" "date '+%H'")
+(defpoll minute :interval "1s" "date '+%M'")
+(defpoll date :interval "1h" "date '+%A, %B %d'")
+

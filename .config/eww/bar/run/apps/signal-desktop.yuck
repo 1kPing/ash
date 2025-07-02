@@ -1,0 +1,13 @@
+(defwidget signal-desktop []
+    (eventbox :cursor "pointer"
+              (button :class "app"
+                      :onclick "hyprctl dispatch exec signal-desktop"
+                      :onmiddleclick "killall signal-desktop"
+                      (image :path "${app_icon_dir}signal-desktop.svg"
+                             :image-width image_size
+                             :image-height image_size
+                      )
+              )
+    )
+)
+

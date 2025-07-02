@@ -1,0 +1,22 @@
+(defwidget dock []
+    (box :class "dock"
+         :orientation "v"
+         :space-evenly "false"
+         :valign "start"
+         (tabs)
+         (space)
+    )
+)
+
+(defwindow dock
+    :monitor "0"
+    :geometry (geometry :width "36%"
+                        :height "64%"
+                        :anchor "bottom center"
+    )
+    :stacking "fg"
+    :exclusive "false"
+    :focusable "false"
+    (dock)
+)
+

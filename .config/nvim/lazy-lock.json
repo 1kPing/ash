@@ -1,0 +1,6 @@
+{
+  "alpha-nvim": { "branch": "main", "commit": "a35468cd72645dbd52c0624ceead5f301c566dff" },
+  "indent-blankline.nvim": { "branch": "master", "commit": "005b56001b2cb30bfa61b7986bc50657816ba4ba" },
+  "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
+  "mini.icons": { "branch": "main", "commit": "94848dad1589a199f876539bd79befb0c5e3abf0" }
+}

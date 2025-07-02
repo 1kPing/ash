@@ -2,6 +2,7 @@
 
 trap 'exit 1' INT
 
+
 echo "!! This script is meant for a fresh install of Arch Linux !!"
 sleep 1
 echo "!! Everything currently in ~ will be moved to /home/old~N !!"
@@ -11,7 +12,7 @@ read answer
 if [ "$answer" = "^C" ]; then
     exit 1
 else
-    echo "Backing up ~ to an available /home/old~N directory and moving configurations..."
+    echo "Backing up ~ to an available /home/old~N directory and moving files..."
     
     base_dir="/home/old~"
     target_dir="$base_dir"
@@ -37,21 +38,20 @@ else
     rm ~/README.md
 fi
 
-sudo mv pacman.conf /etc
-sudo pacman -Syu --needed base-devel git rustup --noconfirm
+sudo mv -f ~/pacman.conf /etc
+sudo pacman -Syyu base linux linux-firmware base-devel grub efibootmgr networkmanager git rustup --noconfirm
 rustup default stable
 git clone https://aur.archlinux.org/paru.git
 cd paru
 makepkg -si --noconfirm
 cd
 
-packages="hyprshot librewolf-bin neofetch discord gtk-layer-shell libdbusmenu pipewire-alsa sof-firmware socat blender btop fastfetch foot galculator gimp gnome-keyring gnome-themes-extra gtk-engine-murrine hyprland hyprlock hyprpaper hyprsunset imv libreoffice-fresh ly mako mpv neovim nwg-look pavucontrol pcmanfm-gtk3 pipewire-pulse prismlauncher qbittorrent sassc signal-desktop starship ttf-font-awesome ufw waybar wev wine-gecko wine-mono wofi xdg-desktop-portal-hyprland yazi zsh"
+packages="linux-zen linux-zen-headers github-desktop-bin hyprshot librewolf-bin gtk-layer-shell libdbusmenu pipewire-alsa sof-firmware socat blender btop fastfetch foot galculator gamemode gimp gnome-themes-extra gtk-engine-murrine hyprland hyprlock hyprpaper hyprsunset imv libreoffice-fresh mako mangohud mpv neovim nwg-look pavucontrol pcmanfm-gtk3 pipewire-pulse prismlauncher qbittorrent sassc signal-desktop starship ttf-font-awesome ufw waybar wev wine-gecko wine-mono wofi xdg-desktop-portal-gtk xdg-desktop-portal-hyprland yazi zsh"
 
 for package in $packages; do
     paru -S --noconfirm "$package"
 done
 
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/kontr0x/github-desktop-install/main/installGitHubDesktop.sh)"
 sudo mv ~/binaries/* /usr/local/bin
 rmdir ~/binaries
 
@@ -69,57 +69,35 @@ if [ "$answer" = "y" ]; then
         if [ "$answer" = "y" ]; then
             flatpak install io.github.ungoogled_software.ungoogled_chromium -y
         fi
+    echo "Do you want to install zen browser through flatpak? (y/n)"
+        read answer
+        if [ "$answer" = "y" ]; then
+            flatpak install app.zen_browser.zen -y
+        fi
 fi
 
-sudo pacman -S steam
-sudo pacman -S amd-ucode
-sudo pacman -S nvidia
-
 xdg-settings set default-web-browser librewolf.desktop
-xdg-mime default imv.desktop image/avif
-xdg-mime default imv.desktop image/gif
-xdg-mime default imv.desktop image/jpeg
-xdg-mime default imv.desktop image/jpg
-xdg-mime default imv.desktop image/png
-xdg-mime default imv.desktop image/svg
-xdg-mime default imv.desktop image/webp
-xdg-mime default mpv.desktop audio/cue
-xdg-mime default mpv.desktop audio/m4a
-xdg-mime default mpv.desktop audio/mp3
-xdg-mime default mpv.desktop audio/ogg
-xdg-mime default mpv.desktop audio/wav
-xdg-mime default mpv.desktop video/avi
-xdg-mime default mpv.desktop video/h264
-xdg-mime default mpv.desktop video/h265
-xdg-mime default mpv.desktop video/mkv
-xdg-mime default mpv.desktop video/mov
-xdg-mime default mpv.desktop video/mp4
-xdg-mime default mpv.desktop video/mpeg
-xdg-mime default mpv.desktop video/mpg
-xdg-mime default mpv.desktop video/mpv
-xdg-mime default mpv.desktop video/ogv
-xdg-mime default mpv.desktop video/webm
+xdg-mime default imv.desktop image/avif image/gif image/jpeg image/jpg image/png image/svg image/webp
+xdg-mime default mpv.desktop audio/cue audio/m4a audio/mp3 audio/ogg audio/wav video/avi video/h264 video/h265 video/mkv video/mov video/mp4 video/mpeg video/mpg video/mpv video/ogv video/webm
 
 sudo ~/graphite-gtk-theme/other/grub2/install.sh -b
 ~/graphite-gtk-theme/install.sh --tweaks rimless black
 gsettings set org.gnome.desktop.interface gtk-theme 'Graphite-Dark'
 gsettings set org.gnome.desktop.interface icon-theme 'Gruvbox-Plus-Dark'
 rm -r ~/graphite-gtk-theme
-sudo echo "QT_QPA_PLATFORMTHEME=gtk3" | sudo tee -a /etc/environment
-swww img ~/Pictures/wallpapers/black.png
-
-~/Tela-circle-icon-theme/install.sh -d ~/.icons
+sudo echo "QT_QPA_PLATFORMTHEME=gtk3" | sudo tee /etc/environment
 
 echo "vm.swappiness = 1" | sudo tee /etc/sysctl.conf
 sudo sysctl -p
 
-echo "arch linux + ly + hyprland: setup successful"
+sudo mv -f ~/grub /etc/default/grub
+sudo grub-mkconfig -o /boot/grub/grub.cfg
 
-echo "finished, reboot your computer"
-
-sudo systemctl enable ly
+sudo pacman -S steam
+sudo pacman -S amd-ucode
+sudo pacman -S nvidia-dkms
 
 rm ~/a.sh
 
-exit 0
+Hyprland
 

@@ -1,0 +1,13 @@
+(defwidget steam []
+    (eventbox :cursor "pointer"
+              (button :class "app"
+                      :onclick "hyprctl dispatch exec steam"
+                      :onmiddleclick "killall steam"
+                      (image :path "${app_icon_dir}steam.svg"
+                             :image-width image_size
+                             :image-height image_size
+                      )
+              )
+    )
+)
+

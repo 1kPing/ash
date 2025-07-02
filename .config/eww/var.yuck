@@ -1,0 +1,33 @@
+(defvar image_size "20")
+
+(defvar animation_duration "140ms")
+
+(defvar show_workspaces_default "true")
+(defvar show_workspaces_onhover "true")
+(defvar show_workspaces_onhoverlost "true")
+
+(defvar show_apps_default "true")
+(defvar show_apps_onhover "true")
+(defvar show_apps_onhoverlost "true")
+
+(defvar show__default "true")
+(defvar show__onhover "true")
+(defvar show__onhoverlost "true")
+
+(defvar show_date_default "true")
+(defvar show_date_onhover "true")
+(defvar show_date_onhoverlost "true")
+
+(defvar show_time_default "true")
+(defvar show_time_onhover "true")
+(defvar show_time_onhoverlost "true")
+
+(defvar show_dock_default "true")
+(defvar show_dock_onhover "true")
+(defvar show_dock_onhoverlost "true")
+
+(defvar app_icon_dir "../../.icons/Suru++-Asprómauros/apps/scalable/")
+
+;(defvar reveal_tux "false")
+;(defvar tux_size "26")
+

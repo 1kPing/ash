@@ -1,0 +1,24 @@
+.workspaces {
+       background: $t7black;
+       padding: 5px;
+       border: 3px solid $t7white;
+       border-radius: 10px;
+       font-family: Adwaita;
+       font-size: 11pt;
+       font-weight: Bold;
+
+    button {
+      &.empty {
+        color: $t2white;
+      }
+
+      &.occupied {
+        color: $t5white;
+      }
+
+      &.current {
+        color: $t9white;
+      }
+    }
+}
+

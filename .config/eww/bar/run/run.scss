@@ -1,0 +1,20 @@
+.tux {
+  background: $t7black;
+  border: 3px solid $t7white;
+  border-radius: 4px;
+}
+
+.apps {
+  background: $t7black;
+  padding: 3px;
+  border: 3px solid $t7white;
+  border-radius: 10px;
+}
+
+.appgap {
+  font-family: Iosevka;
+  font-size: 9pt;
+  font-weight: Bold;
+  color: $t7white;
+}
+

@@ -1,0 +1,6 @@
+(defwidget tabs []
+    (box :class "tabs"
+         (label :text "hi")
+    )
+)
+

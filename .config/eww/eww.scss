@@ -1,12 +1,17 @@
-@import "../colors.scss";
+@import "var.scss";
 
 * {
    all: unset;
-   transition: all 0.3s ease;
+   transition: all 0.24s ease;
+   font-family: Adwaita;
    font-weight: Bold;
-  }
+}
 
 @import "bar/bar.scss";
-@import "apps/apps.scss";
-@import "workspaces/workspaces.scss";
-@import "time/time.scss";
+@import "bar/run/run.scss";
+@import "bar/workspaces/workspaces.scss";
+@import "bar/time/time.scss";
+@import "dock/dock.scss"
+@import "dock/tabs/tabs.scss"
+@import "dock/space/space.scss"
+

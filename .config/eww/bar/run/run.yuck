@@ -1,0 +1,16 @@
+(defwidget run []
+    (eventbox :onhover "eww update show_apps_default=${show_apps_onhover}"
+              :onhoverlost "eww update show_apps_default=${show_apps_onhoverlost}"
+              (box :orientation "h"
+                   :space-evenly "false"
+                   :halign "center"
+                   :valign "center"
+                   (revealer :reveal show_apps_default
+                             :transition "slideright"
+                             :duration animation_duration
+                             (apps)
+                   )
+              )
+    )
+)
+

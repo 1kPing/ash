@@ -1,0 +1,30 @@
+(include "bar/bar.yuck")
+
+(include "bar/run/run.yuck")
+
+(include "bar/run/apps.yuck")
+
+(include "bar/run/apps/zen-browser.yuck")
+(include "bar/run/apps/librewolf.yuck")
+(include "bar/run/apps/steam.yuck")
+(include "bar/run/apps/discord.yuck")
+(include "bar/run/apps/signal-desktop.yuck")
+(include "bar/run/apps/foot-btop.yuck")
+(include "bar/run/apps/foot-nvim.yuck")
+(include "bar/run/apps/pcmanfm.yuck")
+(include "bar/run/apps/ungoogled-chromium.yuck")
+(include "bar/run/apps/prismlauncher.yuck")
+(include "bar/run/apps/galculator.yuck")
+
+(include "bar/workspaces/workspaces.yuck")
+
+(include "bar/time/time.yuck")
+
+;(include "bar/run/tux.yuck")
+
+(include "dock/dock.yuck")
+
+(include "dock/tabs/tabs.yuck")
+
+(include "dock/space/space.yuck")
+

@@ -1,0 +1,45 @@
+(defwidget time []
+    (eventbox :onhover "eww update show_time_default=${show_time_onhover} && eww update show_date_default=${show_date_onhover}"
+              :onhoverlost "eww update show_time_default=${show_time_onhoverlost} && eww update show_date_default=${show_date_onhoverlost}"
+              (box :orientation "h"
+                   :space-evenly "false"
+                   :halign "end"
+                   :valign "center"
+                   (revealer :reveal show_time_default
+                             :transition "slideleft"
+                             :duration animation_duration
+                             (box :class "time" 
+                                  :orientation "h"
+                                  :space-evenly "false"
+                                  :halign "end"
+                                  :valign "center"
+                                  (revealer :reveal show_date_default
+                                            :transition "slideleft"
+                                            :duration animation_duration
+                                            (box :orientation "h"
+                                                 :space-evenly "false"
+                                                 :halign "start"
+                                                 :valign "center"
+                                                 (label :class "date"
+                                                        :text date
+                                                 )
+                                                 (label :class "pipe"
+                                                        :text "‎ |‎ "
+                                                 )
+                                            )
+                                  )
+                                  (label :class "hour" 
+                                         :text hour
+                                  )
+                                  (label :class "colon" 
+                                         :text ":"
+                                  )
+                                  (label :class "minute" 
+                                         :text minute
+                                  )
+                             )
+                   )
+              )
+    )
+)
+

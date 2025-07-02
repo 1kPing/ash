@@ -1,0 +1,13 @@
+(defwidget galculator []
+    (eventbox :cursor "pointer"
+              (button :class "app"
+                      :onclick "hyprctl dispatch exec galculator"
+                      :onmiddleclick "killall galculator"
+                      (image :path "${app_icon_dir}calculator.svg"
+                             :image-width image_size
+                             :image-height image_size
+                      )
+              )
+    )
+)
+

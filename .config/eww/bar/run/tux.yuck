@@ -1,0 +1,24 @@
+(defwidget tux []
+    (box :orientation "h"
+         :space-evenly "false"
+         :halign "start"
+         :valign "center"
+         :spacing "13" 
+         (revealer :reveal reveal_tux
+                   :transition "slideright"
+                   :duration animation_duration
+                   (box :class "tux"
+                        (eventbox :cursor "pointer"
+                                  (button :onclick "hyprctl dispatch exec 'killall rofi || rofi -show drun'"
+                                          :onmiddleclick "killall wofi"
+                                          (image :path "assets/lindow.svg"
+                                                 :image-width tux_size
+                                                 :image-height tux_size
+                                          )
+                                  )
+                        )
+                   )
+         )    
+    )
+)
+

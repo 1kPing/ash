@@ -1,0 +1,12 @@
+(defwidget zen-browser []
+    (eventbox :cursor "pointer"
+              (button :class "app"
+                      :onclick "hyprctl dispatch exec 'flatpak run app.zen_browser.zen'"
+                      :onmiddleclick "killall zen" 
+                      (image :path "${app_icon_dir}browser.svg"
+                             :image-width image_size
+                             :image-height image_size
+                      )
+              )
+    )
+)

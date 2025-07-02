@@ -1,3 +1,6 @@
+require("config.lazy")
+
+-- vim cmd
 vim.o.background = "dark"
 vim.opt.number = true
 vim.opt.relativenumber = true

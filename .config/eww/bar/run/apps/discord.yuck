@@ -1,0 +1,13 @@
+(defwidget discord []
+    (eventbox :cursor "pointer"
+              (button :class "app"
+                      :onclick "hyprctl dispatch exec 'flatpak run com.discordapp.Discord'"
+                      :onmiddleclick "killall Discord"
+                      (image :path "${app_icon_dir}discord.svg"
+                             :image-width image_size
+                             :image-height image_size
+                      )
+              )
+    )
+)
+

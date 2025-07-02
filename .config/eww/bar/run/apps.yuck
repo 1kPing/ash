@@ -1,0 +1,29 @@
+(defwidget apps []
+    (box :class "apps"
+         :orientation "h"
+         :space-evenly "false"
+         :halign "center"
+         :valign "center"
+         (label :class "appgap"
+                :text "|‎ "
+         )
+         (box :orientation "h"
+              :spacing "7"
+              (zen-browser)
+              (librewolf)
+              (ungoogled-chromium)
+              (signal-desktop)
+              (discord)
+              (steam)
+              (prismlauncher)
+              (foot-btop)
+              (pcmanfm)
+              (galculator)
+              (foot-nvim)
+         )
+         (label :class "appgap"
+                :text "‎ |"
+         )
+    )
+)
+

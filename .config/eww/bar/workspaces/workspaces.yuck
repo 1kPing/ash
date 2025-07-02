@@ -1,0 +1,34 @@
+(defwidget workspaces []
+    (eventbox :onhover "eww update show_workspaces_default=${show_workspaces_onhover}"
+              :onhoverlost "eww update show_workspaces_default=${show_workspaces_onhoverlost}"
+              (box :orientation "h"
+                   :space-evenly "false"
+                   :halign "start"
+                   :valign "center"
+                   (revealer :reveal show_workspaces_default
+                             :transition "slideright"
+                             :duration animation_duration
+                             (box :class "workspaces"
+                                  :orientation "h"
+                                  :space-evenly "true"
+                                  :halign "start"
+                                  :valign "center"
+                                  (for workspace in hyprland
+                                       (eventbox :cursor "pointer"
+                                                 :onscroll "echo {} | sed -e 's/up/-1/g' -e 's/down/+1/g' | xargs hyprctl dispatch workspace"
+                                                 :halign "center"
+                                                 (button :class "${workspace.current ? "current" : ""} ${workspace.windows > 0 ? "occupied" : "empty"}"
+                                                         :onclick "hyprctl dispatch workspace ${workspace.id}"
+                                                         (button :class "icon ${workspace.current ? "current" : ""} ${workspace.windows > 0 ? "occupied" : "empty"}"
+                                                                 :width "20"
+                                                                 {workspace.current ? "●" : "●"}
+                                                         )
+                                                 )
+                                       )
+                                  )
+                             )
+                   )
+              )
+    )
+)
+

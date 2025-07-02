@@ -1,0 +1,13 @@
+(defwidget pcmanfm []
+    (eventbox :cursor "pointer"
+              (button :class "app"
+                      :onclick "hyprctl dispatch exec pcmanfm"
+                      :onmiddleclick "killall nvim"
+                      (image :path "${app_icon_dir}file-manager.svg"
+                             :image-width image_size
+                             :image-height image_size
+                      )
+              )
+    )
+)
+

@@ -1,0 +1,13 @@
+(defwidget librewolf []
+    (eventbox :cursor "pointer"
+              (button :class "app"
+                      :onclick "hyprctl dispatch exec librewolf"
+                      :onmiddleclick "killall librewolf"
+                      (image :path "${app_icon_dir}firefox.svg"
+                             :image-width image_size
+                             :image-height image_size
+                      )
+              )
+    )
+)
+

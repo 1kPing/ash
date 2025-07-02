@@ -1,7 +1,10 @@
 eval "$(starship init bash)"
-
+setfont /usr/share/consolefonts/CaskaydiaCoveNerdFontMono-Regular.psf
+clear
 [[ -o interactive ]] || return
-
+#if uwsm check may-start && uwsm select; then
+#	exec uwsm start default
+#fi
 #export XDG_SESSION_TYPE=x11
 #export SDL_VIDEODRIVER=x11
 #export QT_QPA_PLATFORM=xcb
@@ -11,12 +14,15 @@ eval "$(starship init bash)"
 #export __GLX_VENDOR_LIBRARY_NAME=nvidia
 #export __GL_GSYNC_ALLOWED=1
 #export __GL_VRR_ALLOWED=0
-
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
+alias h='Hyprland'
 alias ff='fastfetch'
 alias nf='neofetch'
 alias y='yazi'
 alias sy='sudo yazi'
 alias e='nvim'
 alias se='sudo nvim'
+alias ew='eww k && eww d --logs'
+alias wpp='swww img ~/Pictures/wallpapers/'
+
